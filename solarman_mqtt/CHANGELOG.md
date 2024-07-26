@@ -1,11 +1,11 @@
-## 2024.4.0
-
-- Dependency upgrades
-
 ## 2024.7.0
 
 - Update dependencies
 - Add instructions for NeoVolta home batteries
+
+## 2024.4.0
+
+- Dependency upgrades
 
 ## 2024.1.0
 
