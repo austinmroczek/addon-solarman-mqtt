@@ -11,3 +11,7 @@ First have to follow the [Solarman MQTT](https://github.com/mpepping/solarman-mq
 Then use the stationID, inverterID, loggerID and other variables for the configuration of this add-on.
 
 Start this add-on.
+
+## Device specific instructions
+
+- [NeoVolta home batteries](docs/neovolta.md)
