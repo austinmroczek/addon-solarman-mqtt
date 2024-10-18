@@ -55,14 +55,8 @@ cat << EOF > config.json
 }
 EOF
 
-echo using the following configuration
-echo
-echo
-cat config.json
-echo
-echo
-
 bashio::log.info "Solarman-MQTT configuration complete"
 
 bashio::log.info "Starting Solarman-MQTT daemon."
+python3 -v
 python3 /app/solarman-mqtt/run.py -d
