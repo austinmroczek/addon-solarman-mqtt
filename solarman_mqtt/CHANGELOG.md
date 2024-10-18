@@ -1,3 +1,8 @@
+## 2024.10.0
+
+- Update dependencies
+- Remove secrets from log entries
+
 ## 2024.7.0
 
 - Update dependencies
