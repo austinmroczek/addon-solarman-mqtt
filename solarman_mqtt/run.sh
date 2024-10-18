@@ -58,5 +58,5 @@ EOF
 bashio::log.info "Solarman-MQTT configuration complete"
 
 bashio::log.info "Starting Solarman-MQTT daemon."
-python3 -v
+python3 -V
 python3 /app/solarman-mqtt/run.py -d
