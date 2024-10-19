@@ -4,9 +4,15 @@ set -e
 bashio::log.info "Starting Solarman-MQTT add-on"
 
 python_version=$(python3 -V)
-bashio::log.debug "Using $python_version"
+bashio::log.info "Using $python_version"
 
-bashio::log.debug "Pull Solarman config from HA add-on config"
+# a config file must exist before running the script to create the hast
+if [ ! -f "config.json" ]; then
+    bashio::log.info "Solarman-MQTT config file does not exist. Generating from sample."
+    cp /app/solarman-mqtt/config.sample.json config.json
+fi
+
+bashio::log.info "Pull Solarman config from HA add-on config"
 SM_USERNAME=$(bashio::config 'solarman_username')
 SM_PASSWORD=$(bashio::config 'solarman_password')
 SM_APP_ID=$(bashio::config 'solarman_app_id')
@@ -16,9 +22,9 @@ SM_STATION=$(bashio::config 'solarman_station')
 SM_INVERTER=$(bashio::config 'solarman_inverter')
 SM_LOGGER=$(bashio::config 'solarman_logger')
 
-bashio::log.debug "Generate Solarman passhash from password"
+bashio::log.info "Generate Solarman passhash from password"
 SM_HASH=$(exec python3 /app/solarman-mqtt/run.py --create-passhash "$SM_PASSWORD")
-bashio::log.debug "Hash is $SM_HASH"
+bashio::log.info "Hash is $SM_HASH"
 
 bashio::log.info "Pull MQTT config from HA add-on config"
 MQTT_BROKER=$(bashio::config 'mqtt_broker')
