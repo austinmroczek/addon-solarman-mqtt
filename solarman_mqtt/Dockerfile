@@ -6,7 +6,7 @@ WORKDIR /app
 ADD . /app
 
 # Install requirements for add-on
-RUN apk add --no-cache git curl python3 py3-pip
+RUN apk add --no-cache git curl python3 py3-pip jq
 RUN git clone https://github.com/mpepping/solarman-mqtt.git
 RUN pip install -r /app/solarman-mqtt/requirements.txt
 
