@@ -28,11 +28,7 @@ options:
   solarman_station: null
   solarman_inverter: null
   solarman_logger: null
-  mqtt_broker: "homeassistant.local"
-  mqtt_port: 1883
   mqtt_topic: "solarmanpv"
-  mqtt_username: null
-  mqtt_password: null
 
 schema:
   solarman_username: str
@@ -43,8 +39,4 @@ schema:
   solarman_station: int
   solarman_inverter: str
   solarman_logger: str
-  mqtt_broker: str
-  mqtt_port: int
   mqtt_topic: str
-  mqtt_username: str
-  mqtt_password: password

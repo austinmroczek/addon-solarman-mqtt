@@ -26,12 +26,15 @@ bashio::log.info "Generate Solarman passhash from password"
 SM_HASH=$(exec python3 /app/solarman-mqtt/run.py --create-passhash "$SM_PASSWORD")
 bashio::log.info "Hash is $SM_HASH"
 
-bashio::log.info "Pull MQTT config from HA add-on config"
-MQTT_BROKER=$(bashio::config 'mqtt_broker')
-MQTT_PORT=$(bashio::config 'mqtt_port')
+bashio::log.info "Pull MQTT config from MQTT add-on"
+MQTT_BROKER=$(bashio::services mqtt "host")
+MQTT_PORT=$(bashio::services mqtt "port")
+MQTT_USERNAME=$(bashio::services mqtt "username")
+MQTT_PASSWORD=$(bashio::services mqtt "password")
+
+bashio::log.info "Pull MQTT topic from add-on config"
 MQTT_TOPIC=$(bashio::config 'mqtt_topic')
-MQTT_USERNAME=$(bashio::config 'mqtt_username')
-MQTT_PASSWORD=$(bashio::config 'mqtt_password')
+
 
 bashio::log.info "Creating Solarman-MQTT configuration file"
 cat << EOF > config.json
