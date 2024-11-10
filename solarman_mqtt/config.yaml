@@ -20,7 +20,7 @@ map:
   - addon_config:rw
 
 services:
-  - mqtt
+  - mqtt:need
 
 options:
   solarman_username: null
