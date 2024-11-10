@@ -2,7 +2,7 @@
 name: Solarman MQTT
 
 # must match Docker image tag
-version: "2024.10.4b1"
+version: "2024.10.4b2"
 slug: solarman_mqtt
 description: Home Assistant add-on to send data from the Solarman API to an MQTT broker
 url: "https://github.com/austinmroczek/addon-solarman-mqtt/tree/main/solarman_mqtt"
@@ -18,6 +18,9 @@ init: false
 # probably update to store the config file ?
 map:
   - addon_config:rw
+
+services:
+  - mqtt
 
 options:
   solarman_username: null
