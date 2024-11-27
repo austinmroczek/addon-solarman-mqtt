@@ -1,3 +1,8 @@
+## 2024.11.0
+
+- Improve logging details to help with troubleshooting
+- Grab MQTT settings from Home Assistant, making configuration easier
+
 ## 2024.10.0
 
 - Update dependencies
