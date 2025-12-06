@@ -1,3 +1,7 @@
+## 2025.12.0
+
+- Fix URL
+
 ## 2024.11.0
 
 - Improve logging details to help with troubleshooting
