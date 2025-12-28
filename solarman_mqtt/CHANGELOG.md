@@ -1,3 +1,11 @@
+## 2025.12.2
+
+- Update with new automatic retry following timeouts and other errors
+
+## 2025.12.1
+
+- Several changes, troubleshooting and debugging -- sorry.
+
 ## 2025.12.0
 
 - Fix URL
