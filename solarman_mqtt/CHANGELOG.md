@@ -1,3 +1,8 @@
+## 2026.3
+
+- Update dependencies
+- Improve logging
+
 ## 2025.12.2
 
 - Update with new automatic retry following timeouts and other errors
